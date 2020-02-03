@@ -4,10 +4,20 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
  */
 
-body {
-  background-color: #111;
-  font-family: "Open Sans", sans-serif;
-  color: #fff;
+.merriweather {
+  font-family: 'Merriweather', serif;
+}
+
+.oswald {
+  font-family: 'Oswald', sans-serif;
+}
+
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+* {
+  border: solid red .25px;
 }
 
 .container {
@@ -16,51 +26,80 @@ body {
   width: 100%;
 }
 
-.col-half {
-  display: -webkit-box;
-  display: flex;
-  width: 50%;
-  background: #e21c23;
-  padding: 16px 32px;
-}
-
-.col-half-city {
-  display: -webkit-box;
-  display: flex;
-  width: 50%;
-  background: #be0000;
-  padding: 16px 32px;
-}
-
 h1 {
-  font-family: "Oswald", sans-serif;
+  font-family: x;
   color: #fff;
   font-size: 3rem;
   line-height: 3.25rem;
 }
 
 h3 {
-  font-family: "Oswald", sans-serif;
+  font-family: x;
+  color: #fff;
+  font-size: 2.25rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-family: x;
   color: #fff;
   font-size: 2.25rem;
   line-height: 3rem;
 }
 
 p {
-  font-family: "Open Sans", sans-serif;
+  font-family: x;
   font-size: 1rem;
   color: #fff !important;
   line-height: 1.6rem;
 }
 
 header {
-  padding: 80px;
+  height: 72px;
   text-align: center;
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
-  overflow: hidden;
-  height: auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: end;
+          align-items: flex-end;
+  background: #ccc;
+  /*   &:before {
+    content: ' ';
+    background: url('https://ga-shop-production-herokuapp-com.global.ssl.fastly.net/assets/images/homepage-hero-image_2BAvY.jpg');
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1; 
+  } */
+}
+
+header h1 {
+  width: 50%;
+  color: yellow;
+  padding-right: 20px;
+}
+
+header nav {
+  width: 50%;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+header a {
+  color: white;
+}
+
+header .subHeader {
+  display: block;
+  width: 100%;
+  height: 24px;
+  width: 100%;
 }
 
 header img {
@@ -68,18 +107,23 @@ header img {
   margin: 0 auto;
 }
 
-header:before {
-  content: ' ';
-  background: url("https://ga-shop-production-herokuapp-com.global.ssl.fastly.net/assets/images/homepage-hero-image_2BAvY.jpg");
-  opacity: 0.3;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  z-index: -1;
+.mid-content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+          align-items: center;
+  height: 400px;
+  width: 100%;
+  background: #999;
+}
+
+.mid-content .right-block {
+  width: 340px;
+  height: 260px;
+  background: black;
+  margin: 0 24px 0 0;
 }
 
 ul li {
@@ -88,14 +132,15 @@ ul li {
   padding: 4px;
 }
 
-.footer {
+footer {
+  color: red;
   background: black;
   text-align: center;
   height: auto;
   padding: 20px;
 }
 
-.footer a {
+footer a {
   text-decoration: none;
   color: red;
 }
