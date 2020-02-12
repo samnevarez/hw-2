@@ -5,10 +5,8 @@
  */
 
 * {
-  color: black;
   margin: 0;
   padding: 0;
-  border: solid red .25px;
   box-sizing: border-box;
 }
 
@@ -18,22 +16,19 @@ body {
 
 h2 {
   font-size: 24px;
-  margin: 0 0 16px 0px;
-  text-align: center;
+  margin: 0 0 32px 0px;
 }
 
 h3 {
   font-size: 24px;
   font-family: "Merriweather", serif;
-  margin: 0 0 16px 0px;
-  text-align: center;
+  margin: 0 0 32px 0px;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.5rem;
-  margin: 16px 0;
-  text-align: center;
+  margin: 24px 0;
 }
 
 .strike {
@@ -42,8 +37,8 @@ p {
 
 .under-prm {
   text-decoration: underline;
-  -webkit-text-decoration-color: red;
-          text-decoration-color: red;
+  -webkit-text-decoration-color: #F2FF00;
+          text-decoration-color: #F2FF00;
 }
 
 .container {
@@ -53,21 +48,25 @@ p {
 }
 
 header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 56px auto;
-  height: 56px;
+  height: 72px;
   -webkit-box-align: end;
           align-items: flex-end;
-  background: white;
+  background: #000;
+  display: grid;
   -webkit-box-align: center;
           align-items: center;
+  grid-template-columns: 4fr 6fr;
+  grid-template-rows: 72px auto;
+  border-bottom: 4px solid #F2FF00;
   box-sizing: border-box;
 }
 
 header .logo-type {
   width: auto;
-  color: red;
+  color: yellow;
+  padding-right: 0px;
+  font-size: 28px;
+  line-height: 32px;
   padding: 16px 24px;
   font-family: "Merriweather", serif;
 }
@@ -85,88 +84,73 @@ header nav {
 
 header nav a {
   font-family: "Lato", sans-serif;
-  color: black;
+  color: white;
   padding: 4px 16px;
   text-decoration: none;
-  font-weight: bold;
 }
 
-.hero {
+header nav a:nth-child(-n + 2) {
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+}
+
+header nav a:nth-last-child(-n + 1) {
+  margin-right: 24px;
+  padding: 4px 0 4px 16px;
+}
+
+header .subHeader {
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
+  width: 100%;
+  height: 48px;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
   -webkit-box-align: center;
           align-items: center;
-  height: 60vh;
-  position: relative;
-  overflow: hidden;
+  -webkit-box-pack: center;
+          justify-content: center;
+  background: #adadad;
 }
 
-.hero :before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: .2;
-  background: center center no-repeat url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/melbourne.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+header .subHeader .subCapStyle {
+  font-style: italic;
+  font-size: 28px;
+  padding: 8px;
+}
+
+.mid-content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+          align-items: center;
+  color: black;
+  height: 60vh;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/coworking.jpg) center center no-repeat;
   background-size: cover;
 }
 
-.hero .content {
+.mid-content .right-block {
+  background: rgba(255, 255, 255, 0.9);
   font-family: "Lato", sans-serif;
   width: 50%;
-  min-width: 300px;
+  min-width: 360px;
+  max-width: 540px;
   height: auto;
   padding: 32px;
-  text-align: center;
+  margin: 0 24px 0 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
 }
 
-.hero .content h1 {
-  color: white;
-}
-
-.hero .content p {
+.mid-content .right-block p {
   font-family: "Lato", sans-serif;
-  color: white;
-}
-
-.local-blocks {
-  background: white;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  grid-gap: 16px 16px;
-  margin: 16px 0;
-}
-
-.local-blocks .card {
-  -webkit-box-pack: space-evenly;
-          justify-content: space-evenly;
-  padding: 24px;
-}
-
-.local-blocks .card .local-title {
-  display: block;
-}
-
-.block-wrapper {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 48px auto;
-  padding: 24px;
 }
 
 .featured-blocks {
+  max-width: 1160px;
+  width: auto;
   background: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -174,36 +158,20 @@ header nav a {
   -webkit-box-direction: normal;
           flex-direction: row;
   grid-gap: 16px 16px;
-  margin: 16px 0;
-  height: auto;
+  margin: 16px auto;
 }
 
-.featured-blocks .featured-img {
-  height: 200px;
-}
-
-.featured-blocks .featured-img :before {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.featured-blocks .card:nth-child(1) .featured-img:nth-child(1) {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/fitzroy.jpg);
-}
-
-.featured-blocks .card:nth-child(2) .featured-img:nth-child(1) {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/st-kilda.jpg);
-}
-
-.featured-blocks .card:nth-child(3) .featured-img:nth-child(1) {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/central-business-district.jpg);
+.featured-blocks .card:nth-child(-n + 2) {
+  border-right: 1px solid #ccc;
 }
 
 .featured-blocks .card {
-  -webkit-box-pack: space-evenly;
-          justify-content: space-evenly;
   padding: 24px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 
 .featured-blocks .card p {
@@ -212,31 +180,26 @@ header nav a {
 }
 
 button {
-  background: red;
-  color: white;
-  font-size: 16px;
-  min-width: 120px;
-  width: auto;
-  padding: 8px;
+  font-size: 24px;
+  width: 100%;
+  min-width: 320px;
+  padding: 16px;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   border-radius: 5px;
-  display: -webkit-inline-box;
-  display: inline-flex;
-  box-shadow: 0 12px 10px -12px #000;
-  -webkit-box-pack: center;
-          justify-content: center;
+  display: block;
+  box-shadow: 0 8px 18px -12px #000;
 }
 
 .prm-btn {
-  background: red;
-  border-bottom: 2px solid #e60000;
+  background: #F2FF00;
+  border-bottom: 2px solid #dae600;
 }
 
 .scd-btn {
-  background: blue;
+  background: #ADADAD;
   align-self: flex-end;
-  border-bottom: 2px solid #0000cc;
+  border-bottom: 2px solid #949494;
   margin-top: auto;
 }
 
